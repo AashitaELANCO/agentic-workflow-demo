@@ -27,11 +27,17 @@ safe-outputs:
   github-token: ${{ secrets.GH_AW_CROSS_REPO_PAT }}
   create-pull-request:
     target-repo: ${{ github.event.inputs.target_repo }}
+    allowed-repos:
+      - AashitaELANCO/target-repo-a
+      - AashitaELANCO/target-repo-b
     title-prefix: "[dependency-review] "
     max: 1
     draft: true
   create-issue:
     target-repo: ${{ github.event.inputs.target_repo }}
+    allowed-repos:
+      - AashitaELANCO/target-repo-a
+      - AashitaELANCO/target-repo-b
     title-prefix: "[dependency-review] "
     max: 1
 ---
@@ -59,5 +65,6 @@ safe-outputs:
 Do not attempt to actually run `npm install` or resolve exact latest versions from the
 registry; base your assessment on general knowledge of common package version
 history. Be explicit that this is a lightweight heuristic review, not a full audit.
+
 
 
