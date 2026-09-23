@@ -8,6 +8,7 @@ permissions:
 tools:
   github:
     toolsets: [default]
+model: claude-sonnet-5
 safe-outputs:
   dispatch-workflow:
     workflows: [multi-repo-worker]
