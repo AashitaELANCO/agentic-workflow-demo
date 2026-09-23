@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  copilot-requests: write
 tools:
   github:
     toolsets: [default]
@@ -32,3 +33,4 @@ repositories.
 2. Summarize which repositories were dispatched.
 
 Do not analyze the repositories yourself here; that is the worker'"'"'s job.
+

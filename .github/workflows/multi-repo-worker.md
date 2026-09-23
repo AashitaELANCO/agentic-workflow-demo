@@ -1,6 +1,6 @@
 ---
 name: Multi-Repo Worker
-description: Analyze a target repository'"'"'s dependencies and open a customized PR or issue.
+description: Analyze a target repository's dependencies and open a customized PR or issue.
 on:
   workflow_dispatch:
     inputs:
@@ -17,6 +17,7 @@ checkout:
   current: true
 permissions:
   contents: read
+  copilot-requests: write
 tools:
   github:
     toolsets: [default]
@@ -58,3 +59,5 @@ safe-outputs:
 Do not attempt to actually run `npm install` or resolve exact latest versions from the
 registry; base your assessment on general knowledge of common package version
 history. Be explicit that this is a lightweight heuristic review, not a full audit.
+
+
