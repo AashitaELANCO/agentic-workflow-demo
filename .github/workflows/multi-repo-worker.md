@@ -21,6 +21,7 @@ tools:
   github:
     toolsets: [default]
   bash: true
+model: claude-sonnet-5
 safe-outputs:
   github-token: ${{ secrets.GH_AW_CROSS_REPO_PAT }}
   create-pull-request:
